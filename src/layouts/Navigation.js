@@ -7,7 +7,7 @@ import { styled } from '@mui/material/styles'
 import Toolbar from '@mui/material/Toolbar'
 import * as React from 'react'
 import { mainListItems, secondaryListItems } from './listItems'
-import { drawerWidth } from './store'
+import { drawerWidth } from '../store/store'
 
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: prop => prop !== 'open'
