@@ -7,7 +7,7 @@ import { styled } from '@mui/material/styles'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import * as React from 'react'
-import { drawerWidth } from '../store/store'
+import { drawerWidth } from '../store'
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: prop => prop !== 'open'
@@ -49,13 +49,7 @@ const Header = props => {
         >
           <MenuIcon />
         </IconButton>
-        <Typography
-          component='h1'
-          variant='h6'
-          color='inherit'
-          noWrap
-          sx={{ flexGrow: 1 }}
-        >
+        <Typography component='h1' variant='h6' color='inherit' noWrap sx={{ flexGrow: 1 }}>
           Dashboard
         </Typography>
         <IconButton color='inherit'>

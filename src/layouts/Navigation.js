@@ -1,13 +1,18 @@
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import Divider from '@mui/material/Divider'
 import MuiDrawer from '@mui/material/Drawer'
+import Icon from '@mui/material/Icon'
 import IconButton from '@mui/material/IconButton'
 import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import ListItemText from '@mui/material/ListItemText'
+import ListSubheader from '@mui/material/ListSubheader'
 import { styled } from '@mui/material/styles'
 import Toolbar from '@mui/material/Toolbar'
+import { navigationConfig } from 'config/navigationConfig'
 import * as React from 'react'
-import { mainListItems, secondaryListItems } from './listItems'
-import { drawerWidth } from '../store/store'
+import { drawerWidth } from '../store'
 
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: prop => prop !== 'open'
@@ -53,9 +58,28 @@ const Navigation = props => {
         </IconButton>
       </Toolbar>
       <Divider />
-      <List>{mainListItems}</List>
+      <List>
+        {navigationConfig.primary.map(item => (
+          <ListItem button key={item.id}>
+            <ListItemIcon>
+              <Icon>{item.icon}</Icon>
+            </ListItemIcon>
+            <ListItemText primary={item.text} />
+          </ListItem>
+        ))}
+      </List>
       <Divider />
-      <List>{secondaryListItems}</List>
+      <List>
+        <ListSubheader inset>Saved reports</ListSubheader>
+        {navigationConfig.secondary.map(item => (
+          <ListItem button key={item.id}>
+            <ListItemIcon>
+              <Icon>{item.icon}</Icon>
+            </ListItemIcon>
+            <ListItemText primary={item.text} />
+          </ListItem>
+        ))}
+      </List>
     </Drawer>
   )
 }

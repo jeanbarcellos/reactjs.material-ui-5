@@ -1,8 +1,8 @@
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
+import Main from 'layouts/Main'
 import * as React from 'react'
 import Header from './Header'
-import Main from 'pages/dashboard/Main'
 import Navigation from './Navigation'
 
 const Layout = () => {
