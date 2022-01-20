@@ -1,12 +1,10 @@
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
-import Link from '@mui/material/Link'
 import Paper from '@mui/material/Paper'
-import Typography from '@mui/material/Typography'
 import * as React from 'react'
-import Chart from './Chart'
-import Deposits from './Deposits'
-import Orders from './Orders'
+import Chart from './components/Chart'
+import Deposits from './components/Deposits'
+import Orders from './components/Orders'
 
 const DashboardPage = () => {
   return (
