@@ -10,9 +10,9 @@ import ListItemText from '@mui/material/ListItemText'
 import ListSubheader from '@mui/material/ListSubheader'
 import { styled } from '@mui/material/styles'
 import Toolbar from '@mui/material/Toolbar'
+import layoutConfig from 'config/layoutConfig'
 import { navigationConfig } from 'config/navigationConfig'
 import * as React from 'react'
-import { drawerWidth } from '../store'
 
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: prop => prop !== 'open'
@@ -20,7 +20,7 @@ const Drawer = styled(MuiDrawer, {
   '& .MuiDrawer-paper': {
     position: 'relative',
     whiteSpace: 'nowrap',
-    width: drawerWidth,
+    width: layoutConfig.drawer.width,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen
