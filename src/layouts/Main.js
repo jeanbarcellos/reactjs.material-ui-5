@@ -31,7 +31,14 @@ const Main = () => {
     >
       <Toolbar />
 
-      {routesConfig()}
+      <Box
+        component='main'
+        sx={{
+          padding: '20px'
+        }}
+      >
+        {routesConfig()}
+      </Box>
 
       <Copyright sx={{ pt: 4 }} />
     </Box>

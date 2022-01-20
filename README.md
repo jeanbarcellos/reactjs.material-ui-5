@@ -15,3 +15,7 @@ Referências:
 - Instalação do Material-UI
 
   https://mui.com/pt/getting-started/installation/
+
+- Estilo personalizado (Propriedade `sx`)
+
+  https://mui.com/pt/system/the-sx-prop/
